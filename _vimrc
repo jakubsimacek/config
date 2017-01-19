@@ -5,7 +5,8 @@ source $VIMRUNTIME/vimrc_example.vim
 set guifont=Courier_New:h10:cEASTEUROPE
 set lines=60 columns=140
 set nrformats-=octal
-set noerrorbells visualbell t_vb=
+"set noerrorbells visualbell t_vb=
+set noerrorbells novisualbell
 
 noremap <C-kPlus> <C-A>
 
