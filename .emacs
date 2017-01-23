@@ -33,3 +33,4 @@
 (global-linum-mode t)
 (setq inhibit-startup-screen t)
 (setq-default frame-title-format '("%b %f [%m]"))
+
