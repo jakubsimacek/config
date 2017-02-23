@@ -30,6 +30,29 @@ au GUIEnter * simalt ~x
 set number
 set tw=0
 
+" http://stackoverflow.com/questions/9721732/mapping-shift-arrows-to-selecting-characters-lines
+" shift+arrow selection
+nmap <S-Up> v<Up>
+nmap <S-Down> v<Down>
+nmap <S-Left> v<Left>
+nmap <S-Right> v<Right>
+vmap <S-Up> <Up>
+vmap <S-Down> <Down>
+vmap <S-Left> <Left>
+vmap <S-Right> <Right>
+imap <S-Up> <Esc>v<Up>
+imap <S-Down> <Esc>v<Down>
+imap <S-Left> <Esc>v<Left>
+imap <S-Right> <Esc>v<Right>
+" Also mapping usual copy/cut/paste like this you can return to insert mode after select+copy, for example
+vmap <C-c> y<Esc>i
+vmap <C-x> d<Esc>i
+map <C-v> pi
+imap <C-v> <Esc>pi
+imap <C-z> <Esc>ui
+
+
+
 set diffexpr=MyDiff()
 "function MyDiff()
 "  let opt = '-a --binary '
