@@ -48,7 +48,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(package-selected-packages (quote (helm use-package scala-mode pug-mode))))
+ '(package-selected-packages (quote (eclim helm use-package scala-mode pug-mode))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -85,3 +85,8 @@
 (global-set-key (kbd "M-j s") 'jakub-switch-map)
 (defun switch-to-scratch () (interactive) (switch-to-buffer "*scratch*"))
 (global-set-key (kbd "M-j s s") 'switch-to-scratch)
+
+(require 'eclim)
+(add-hook 'java-mode-hook 'eclim-mode)
+
+;;(require 'eclimd)
