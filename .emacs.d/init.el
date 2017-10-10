@@ -134,3 +134,7 @@
 (require 'server)
 (unless (server-running-p)
   (server-start))
+
+(setq initial-major-mode 'emacs-lisp-mode)
+(setq initial-scratch-message nil)
+
